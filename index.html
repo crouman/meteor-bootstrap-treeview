@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Treeview Playground</title>
+
+<!-- bootstrap -->
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">	
+
+<!-- open sans -->
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,300,400,700">	
+
+<!--font-awesome glifs-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+<!-- apple device -->
+<link rel="apple-touch-icon" href="images/ai-logo_04.png">
+<meta name="apple-mobile-web-app-capable" content="yes"><!--hiding safar interface components-->
+<meta name="apple-mobile-web-app-status-bar-style" content="black"><!--status bar appearance-->
+<meta name="viewport" content="width=device-width"><!--viewport width, prevent scaling-->
+<meta name="viewport" content="initial-scale=1.0"><!--viewport scale-->
+
+	<style>
+		html{
+			font-size:62.5%;
+		}
+		body{
+			background-color: #F9F9F9;
+			color: #444;
+			font-family:"Open Sans";
+			font-size:1.4rem;
+		}
+
+		.client-header{
+			background-color: #F9F9F9;
+	    height: 60px;
+	    padding-bottom: 15px;
+	    padding-top: 7px;
+	    left: 0;
+	    right: 0;
+	    z-index: 9999;
+		}
+		.client-header img{
+			height: 45px;
+		}
+
+		.navbar-default{
+			background-color: #FFF;
+			top:60px;/*overrides .fixed-top*/
+		}
+		.navbar-fixed-top{
+			border-width: 1px;
+		}
+
+		.tree-container{
+			padding-top:125px;
+		}	
+		.treeview{
+			background-color: #FFF;
+			border: 1px solid #DDD;
+			border-radius: 5px;
+			box-shadow: 0 2px 0 #BBB;
+		}
+	</style>
+
+</head>
+
+<body>
+	<div class="container client-header affix">		
+		<div class=""><img src="images/generic-telecom-logo.png" /></div>
+	</div>
+	<nav class="navbar navbar-default navbar-fixed-top" id="navbar">
+		<div class="container">
+			<div class="navbar-header">
+      <a class="navbar-brand" href="#">
+        Header
+      </a>
+    </div>
+		</div>
+	</nav>
+
+	<!--tree-->
+	<div class="container tree-container">
+		<div id="treeview7" class="treeview">
+			<ul class="list-group">
+				<li class="list-group-item" data-nodeid="0" >
+					<span class="node-name">
+						<span class="icon expand-icon glyphicon glyphicon-minus"></span>
+						<span class="icon node-icon"></span>Corporate
+					</span>
+					<span class="node-value"></span>
+				</li>
+				<li class="list-group-item" data-nodeid="1">
+					<span class="node-name">
+						<span class="indent"></span>
+						<span class="icon expand-icon glyphicon glyphicon-plus"></span>
+						<span class="icon node-icon"></span>Invoice Group Discounts
+					</span>
+					<span class="node-value">CAD (2.41)</span>
+				</li>
+				<li class="list-group-item" data-nodeid="4">
+					<span class="indent"></span><span class="icon glyphicon"></span>
+					<span class="icon node-icon"></span>Child 2
+				</li>
+				<li class="list-group-item" data-nodeid="5">
+					<span class="icon glyphicon"></span>
+					<span class="icon node-icon"></span>Parent 2
+				</li>
+				<li class="list-group-item" data-nodeid="6">
+					<span class="icon glyphicon"></span>
+					<span class="icon node-icon"></span>Parent 3
+				</li>
+				<li class="list-group-item" data-nodeid="7">
+					<span class="icon glyphicon"></span>
+					<span class="icon node-icon"></span>Parent 4
+				</li>
+				<li class="list-group-item" data-nodeid="8">
+					<span class="icon glyphicon"></span>
+					<span class="icon node-icon"></span>Parent 5
+				</li>
+			</ul>
+		</div>
+	</div>
+
+
+	<!--jquery-->
+	<script type="text/javascript" src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+	<!--bootstrap-->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+	<!--treeview-->
+	<script src="js/bootstrap-treeview.js"></script>
+	<script src="js/treeview-instance.js"></script><!--this is mine-->
+
+</body>
